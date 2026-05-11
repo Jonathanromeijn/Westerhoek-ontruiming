@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "content"
+    label: "Website teksten"
+    files:
+      - name: "home"
+        label: "Home pagina"
+        file: "_data/content.json"
+        fields:
+          - label: "Pagina's"
+            name: "home"
+            widget: "object"
+            fields:
+              - { label: "Klein kopje boven titel", name: "hero_eyebrow", widget: "string" }
+              - { label: "Hoofdtitel", name: "hero_h1", widget: "string" }
+              - { label: "Grote alinea", name: "hero_lead", widget: "text" }
+              - { label: "Kleine alinea", name: "hero_sub", widget: "text" }
+              - { label: "Telefoonnummer", name: "telefoon", widget: "string" }
+              - { label: "E-mailadres", name: "email", widget: "string" }
+          - label: "Voor nabestaanden"
+            name: "nabestaanden"
+            widget: "object"
+            fields:
+              - { label: "Hoofdtitel", name: "hero_h1", widget: "string" }
+              - { label: "Grote alinea", name: "hero_lead", widget: "text" }
+              - { label: "Prijs", name: "prijs", widget: "string" }
+              - { label: "Prijs toelichting", name: "prijs_tekst", widget: "text" }
+          - label: "Voor instellingen"
+            name: "instellingen"
+            widget: "object"
+            fields:
+              - { label: "Hoofdtitel", name: "hero_h1", widget: "string" }
+              - { label: "Grote alinea", name: "hero_lead", widget: "text" }
+              - { label: "Prijs", name: "prijs", widget: "string" }
+              - { label: "Prijs toelichting", name: "prijs_tekst", widget: "text" }
